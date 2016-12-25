@@ -5,20 +5,21 @@
 ## 3. 입력받은 값에 맞춰 구구단 테이블 출력
 
 def write_multi_table ():
-    inp = int(input ("what multiplication do U wish to check?"))
-    # try:
-    if inp > 1 and inp <10:
-        for num in range (1,10):
-            # print (multi_input + "*" + a +"="+multi_input*a )
-            # a = a+1
-            ans = inp * num
-            print ("{} * {} = {}".format(inp,num,inp*num))
-    else:
-        print ("2에서 9사이의 숫자를 입력하십시오")
+
+    try:
+        inp = int(input ("what multiplication do U wish to check?"))
+        if inp > 1 and inp <10:
+            for num in range (1,10):
+                # print (multi_input + "*" + a +"="+multi_input*a )
+                # a = a+1
+                ans = inp * num
+                print ("{} * {} = {}".format(inp,num,inp*num))
+        else:
+            print ("2에서 9사이의 숫자를 입력하십시오")
+            write_multi_table()
+    except ValueError:
+        print ("에러다에러!2~9 사이의 숫자만 입력하세요!")
         write_multi_table()
-    # except ValueError:
-    #     print ("2에서 9사이의 숫자만 입력하십시오")
-    #     write_multi_table()
 
 # 함수 호출
 write_multi_table()
