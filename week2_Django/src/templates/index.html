@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block body %}
+<!-- <div style="color:red; font-size:2em">hello world {{ name }}</div>
+<div style='color:blue'>hello world {{ name }}</div>
+<div style='color:yellow'>hello world {{ name }}</div> -->
+<!-- <h1>This is H1 heading <small>this is second text</small></h1> -->
+
+<div class="container">
+  <div class="col-xs-6">
+    <div class="colorful-text">
+      <!-- <div>hello world {{ name }}</div> -->
+      <div>hello world Alicia </div>
+      <div>hello world {{name}} </div>
+      {% for article in article_list %}
+        <div>{{ article.title }}</div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="col-xs-6">
+    {% for article in article_list %}
+      <div>
+        {{ article.title }}
+        <span class="label label-default">
+          {{ article.view_count}}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+
+  <div class="col-xs-12">
+    {% for article in article_list %}
+      <div>
+        {{ article.title }}
+        <span class="label label-default">
+          {{ article.view_count}}
+        </span>
+        <i class="fa fa-play" aria-hidden="true">
+          play
+        </i>
+        <i class="fa fa-stop" aria-hidden="true">
+          stop
+        </i>
+      </div>
+    {% endfor %}
+  </div>
+
+
+</div>
+
+
+<!-- <footer>
+this is footer place<br>
+dev is hard but fun
+</footer> -->
+{% endblock %}
+
+
+
+<!-- <div class="col-xs-6"> -->
+  <!-- <div>new new new </div>
+  <div>other place </div>
+  <div>hahaha </div> -->
+
+  <!-- {% for carticle in article_list %}
+    <div> {{ article.title }}</div>
+  {% endfor %} -->
+<!-- </div> -->
